@@ -37,7 +37,7 @@ public class UserRegistration{
 
         System.out.println("Enter the Password: ");
         String password = sc.next();
-        while(!Pattern.matches("^(?=.*[A-Z])(?=.*[0-9]).{8,}$",password)){
+        while(!Pattern.matches("(?=^.{8,}$)(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]*[@#$%_][0-9a-zA-Z]*",password)){
             System.out.println("Ivalid input. Enter again: ");
             password = sc.nextLine();
         }
