@@ -27,5 +27,13 @@ public class UserRegistration{
             email = sc.next();
         }
 
+        System.out.println("Enter the Phone Number: ");
+        sc.nextLine();
+        String phone = sc.nextLine();
+        while(!Pattern.matches("[0-9]{2}[ ][0-9]{10}",phone)){
+            System.out.println("Ivalid input. Enter again: ");
+            phone = sc.nextLine();
+        }
+
     }
 }
